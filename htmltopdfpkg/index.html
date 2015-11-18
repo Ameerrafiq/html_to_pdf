@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Make URL to PDF</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+</head>
+
+<body id="page-top" data -spy="scroll" data -target=".navbar-fixed-top">
+
+    <!-- Nav -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <!--  Header -->
+		<header class="intro">
+			<div class="intro-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-5">
+							<h1 class="brand-heading">Paste the url</h1>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</header>
+    </nav>
+    <br > <br > <br > <br >
+    <!-- Search button -->
+      <form method="post" id="searchform">
+		<div class="col-md-6 col-md-offset-3">
+		 <input type="text" id="htmlurl" class="form-control" id="mybox" placeholder="Paste url to make it as pdf"  data -rule-maxlength="8" data -rule-minlength="4" data -rule-required="true" />
+		 <br >
+		<div class="col-md-2 col-md-offset-4">
+		   <button type="button" class="btn btn-primary" onClick="download()">Convert &amp; download</button>
+		</div>
+		</div>
+	  </form>
+</body>
+</html>
+<script type="text/javascript">
+		  function download(){
+		   var htmlurl = document.getElementById("htmlurl").value;
+		   window.open("http://FreeHTMLtoPDF.com/?convert="+htmlurl);
+		  }
+
+</script>
